@@ -1,12 +1,12 @@
 #!/bin/bash
 # Author: Homer Rich
-# Use: Convert P7 bundle from cyber.mil and load it into an NSS database.
+# Use: Convert P7 bundle from cyber.mil and dump the files locally.
 
 if [[ $1 = "help" ]] || [[ $1 = "-h" ]] || [[ $1 = "--help" ]] || [[ -z $1 ]]; then
   printf "###############################################################################\n"
-  printf "Run this command to add all certs in a PKCS7(P7) bundle to your NSS store\n"
+  printf "Run this command to dump all certs in a PKCS7(P7) bundle to your local directory\n"
   printf "Dependencies: nss openssl awk sed grep\n"
-  printf "Arguments: 1:Pem Bundle that you would like loaded."
+  printf "Arguments: 1:Pem Bundle that you would like dumped."
   printf "Example usage:\n"
   printf "\t$ bash bundleToThumbCerts.sh Certificates_PKCS7_v5.5_DOD.pem.p7b\n" 
   printf "###############################################################################\n"
